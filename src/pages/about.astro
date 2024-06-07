@@ -1,6 +1,20 @@
 ---
 const pageTitle="About Me"
 
+const identity= {
+  firstName: "Rezzie",
+  country: "Trinidad and Tobago",
+  occupation: "Senior Software Developer",
+  company: "350.org",
+  companyWebsite: "https://350.org",
+  hobbies: ['playing piano', 'playing guitar', 'yoga', 'surfing', 'karaoke', 'travel']
+}
+
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'NextJS', 'ReactNative', 'WordPress']
+
+const happy = true
+const finished = false
+const goal = 3
 ---
 
 <html lang="en">
@@ -20,5 +34,21 @@ const pageTitle="About Me"
 		<p>I'm Rezzie, a developer that loves using code to solve problems that help others.</p>
 
     <p>This site was built to test <a href="https://astro.build" target="_blank">Astro</a>, a framework that promises to be even better than <a href="https://nextjs.org/" target="_blank">Next.js</a>. After recommendation from a coworker currently using it for his developer portfolio and reviewing a <a href="https://www.linkedin.com/pulse/why-ive-ditched-nextjs-forever-astro-alexandru-t%C4%83sic%C4%83-z7zxf" target="_blank">comparison article</a> about these two frameworks, I was convinced to try it to see if it would be a good use for my new online developer portfolio.</p>
+
+    <p>Here are a few quick facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName} from {identity.country}.</li>
+      <li>I work as a {identity.occupation} at <a href={identity.companyWebsite}>{identity.company}</a>, a non-profit climate justice organisation.</li>
+      {identity.hobbies.length >=2 &&
+      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
+      }
+    </ul>
+      <p>My skills are:</p>
+      <ul>
+        {skills.map(skill => <li>{skill}</li>)}
+      </ul>
+      {happy && <p>I am happy to be learning Astro!</p>}
+      {finished && <p>I finished this tutorial!</p>}
+      {goal === 3 ? <p>My goal is to finish this tutorial in 3 days.</p> : <p>My goal is not 3 days to finish this tutorial.</p>}
 	</body>
 </html>
