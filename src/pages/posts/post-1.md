@@ -1,17 +1,14 @@
 ---
-title: 'My first blog post'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "My first blog post"
 pubDate: 2024-06-07
-description: 'This is the first post of my new Astro blog.'
-author: 'Sherezz Grant'
+description: "This is the first post of my new Astro blog."
+author: "Sherezz Grant"
 image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
-  alt: 'The full Astro logo.'
-tags: ["astro", "blogging","learning in public"]
+  url: "https://docs.astro.build/assets/full-logo-light.png"
+  alt: "The full Astro logo."
+tags: ["astro", "blogging", "learning in public"]
 ---
-
-# My first blog post
-
-**Published on**: 2024-06-07
 
 Welcome to my _new blog_ about learning [Astro](https://astro.build)! Here is where I'll share my learning journey as I build this blog.
 
