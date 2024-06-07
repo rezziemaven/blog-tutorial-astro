@@ -1,0 +1,16 @@
+---
+import Social from "./Social.astro"
+const username = 'rezziemaven'
+---
+
+<footer>
+  <p>Learn more about my projects on <Social platform="GitHub" username={username} /> and <Social platform="Instagram" username={username} />!</p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
