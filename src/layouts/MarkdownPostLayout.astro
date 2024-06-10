@@ -8,15 +8,16 @@ const { frontmatter } = Astro.props;
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <p>
-    Tags: {
+  <div class="tags">
+    {
       frontmatter.tags.map((tag) => (
-        <span class="tag">
+        <p class="tag">
           <a href={`/tags/${tag}`}>{tag}</a>
-        </span>
+        </p>
       ))
     }
-  </p>
+  </div>
+
   <hr />
   <slot />
 </BaseLayout>
