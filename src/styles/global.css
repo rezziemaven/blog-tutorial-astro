@@ -98,4 +98,14 @@ h1 {
     font-size: 1.15em;
     background-color: #f8fcfd;
   }
+
+  /* dark theme styles */
+  html.dark {
+    background-color: #0d0950;
+    color: #fff;
+  }
+
+  .dark .nav-links a {
+    color: #fff;
+  }
 }
